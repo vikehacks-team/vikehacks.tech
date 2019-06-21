@@ -1,0 +1,86 @@
+*, *::after, *::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+article section h1 {
+    font-size: 2.3em;
+    /*text-align: center;*/
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    margin: auto;
+    max-width: 1000px;
+    padding: 5px 0;
+}
+
+header .header-logo {
+    color: gray;
+    font-family: 'Open Sans', sans-serif;
+    flex-grow: 1;
+    font-size: 2em;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    text-transform: uppercase;
+}
+
+header nav ul li a {
+    color: black;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+button.cta, .button.cta {
+    background-color: #3f90ff;
+    border: 2px solid transparent;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    padding: 15px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: border 500ms;
+    -moz-transition: border 500ms;
+    -ms-transition: border 500ms;
+    -o-transition: border 500ms;
+    transition: border 500ms;
+}
+
+button.cta:focus, .button.cta:focus, button.cta:hover, .button.cta:hover {
+    border: 2px solid white;
+}
+
+button.cta i.fa, .button.cta i.fa {
+    margin-right: 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+img.logo {
+    width: 500px;
+}
+
+p {
+    line-height: 2em;
+}
