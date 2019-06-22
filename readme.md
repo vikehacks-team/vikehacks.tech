@@ -6,7 +6,7 @@ Clone the repository with git.
 ```
 git clone https://github.com/vikehacks-team/vikehacks.tech
 ```
-For efficiency and speed of development, the team only uses the ``master ``branch. After testing the code locally, you can commit directly to the ``master`` branch.
+For efficiency and speed of development, the team only uses the ``master`` branch. After testing the code locally, you can commit directly to the ``master`` branch.
 
 ## Files
 | Filename | Location | Description |
