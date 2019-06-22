@@ -106,6 +106,7 @@ div.partner {
     font-weight: bold;
 }
 
+/* Causes links to be aquamarine (blue-green)
 article section:nth-child(odd) a {
     color: aquamarine;
-}
+}*/
