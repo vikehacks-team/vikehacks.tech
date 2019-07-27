@@ -1,5 +1,5 @@
 # vikehacks.tech
-The official website for VikeHacks 2019.
+A prototype website for VikeHacks 2019.
 
 ## Contributing
 Clone the repository with git.
