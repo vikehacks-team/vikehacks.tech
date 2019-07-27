@@ -44,13 +44,12 @@ body {
     cursor:default;
 }
 
-.topLink:hover {
-    color: #001e70;
-    text-shadow: 5px 5px 5px #4e4e4e;
-}
-
 .topLink a{
     text-decoration: none;
+}
+
+.topLink a:hover {
+    text-shadow: 5px 5px 5px #4e4e4e;
 }
 
 .breakLine {
