@@ -2,7 +2,6 @@
     * {
         font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
         line-height: 100%;
-        text-shadow: 3px 3px 5px #bdbdbd;
     }
 
     body {
@@ -41,6 +40,18 @@
         vertical-align: middle;
         padding-right: 20px;
         padding-left: 20px;
+        transition: text-shadow 0.25s ease;
+        text-shadow: 3px 3px 5px #bdbdbd;
+        cursor:default;
+    }
+    
+    .topLink:hover {
+        color: #001e70;
+        text-shadow: 5px 5px 5px #4e4e4e;
+    }
+
+    .topLink a{
+        text-decoration: none;
     }
 
     .breakLine {
@@ -68,7 +79,7 @@
         color: #4d4d4d;
     }
 
-    a {
+    .mainBody a {
         color: #0099ff;
     }
 
@@ -81,6 +92,10 @@
         font-size: 50px;
         position: relative;
         left: 40px;
+    }
+    
+    .topLeftLogo a{ 
+        text-decoration: none;
     }
 
     .centerLogo {
@@ -99,6 +114,7 @@
         top: 150px;
         left: 0;
         padding-bottom: 50px;
+        text-shadow: 3px 3px 5px #bdbdbd;
     }
 
     .separatorLine {
@@ -149,30 +165,38 @@
 <body>
     <div class="topBar">
         <div class="topLeftWrapper">
-            <div class="topLeftLogo darkGrayText">
+            <div class="topLeftLogo">
                 <strong>
-                    VikeHacks
+                    <a href="#" class="darkGrayText">
+                        VikeHacks
+                    </a>
                 </strong>
             </div>
         </div>
         <div class="topRightWrapper">
             <div class="topRightLinks">
-                <span class="topLink darkBlueText">
-                    <strong>Home</strong>
+                <span class="topLink">
+                    <a href="" class="darkBlueText">
+                        <strong>Home</strong>
+                    </a>
                 </span>
                 <div class="breakLineWrapper">
                     <div class="breakLine">
                     </div>
                 </div>
-                <span class="topLink darkGrayText">
-                    <strong>Sponsors</strong>
+                <span class="topLink">
+                    <a href="" class="darkGrayText">
+                        <strong>Sponsors</strong>
+                    </a>
                 </span>
                 <div class="breakLineWrapper">
                     <div class="breakLine">
                     </div>
                 </div>
-                <span class="topLink darkGrayText">
-                    <strong>About Us</strong>
+                <span class="topLink">
+                    <a href="" class="darkGrayText">
+                        <strong>About Us</strong>
+                    </a>
                 </span>
             </div>
         </div>
@@ -182,7 +206,7 @@
         </div>
         <div class="separatorLine">
         </div>
-        <div class="textSection">
+        <div class="textSection" id="description">
             <div class="textTitle darkBlueText">
                 <strong>
                     What is VikeHacks?
@@ -207,7 +231,7 @@
         </div>
         <div class="separatorLine">
         </div>
-        <div class="textSection">
+        <div class="textSection" id="beginners">
             <div class="textTitle darkBlueText">
                 <strong>
                     What if I don't know how to code?
@@ -222,7 +246,7 @@
         </div>
         <div class="separatorLine">
         </div>
-        <div class="textSection">
+        <div class="textSection" id="teams">
             <div class="textTitle darkBlueText">
                 <strong>
                     What if I don't have a team or an idea?
@@ -239,7 +263,7 @@
         </div>
         <div class="separatorLine">
         </div>
-        <div class="textSection">
+        <div class="textSection" id="requirements">
             <div class="textTitle darkBlueText">
                 <strong>
                     What should I bring?
@@ -255,7 +279,7 @@
         </div>
         <div class="separatorLine">
         </div>
-        <div class="textSection">
+        <div class="textSection" id="questions">
             <div class="textTitle darkBlueText">
                 <strong>
                     Questions?
@@ -268,7 +292,7 @@
         </div>
         <div class="separatorLine">
         </div>
-        <div class="textSection">
+        <div class="textSection" id="sponsors">
             <div class="textTitle darkBlueText">
                 <strong>
                     SPONSORS
