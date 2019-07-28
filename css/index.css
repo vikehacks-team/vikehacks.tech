@@ -39,12 +39,12 @@ body {
     vertical-align: middle;
     padding-right: 20px;
     padding-left: 20px;
-    transition: text-shadow 0.25s ease;
     text-shadow: 3px 3px 5px #bdbdbd;
     cursor:default;
 }
 
 .topLink a{
+    transition: text-shadow 0.25s ease;
     text-decoration: none;
 }
 
