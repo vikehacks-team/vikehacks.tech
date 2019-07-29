@@ -3,7 +3,7 @@
     line-height: 100%;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1100px) {
     .topRightLinks{
         font-size: 30px;
     }
@@ -37,9 +37,12 @@
         float: right;
         right: 50px;
     }
+    .mainBody{   
+        top: 150px;
+    }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1100px) {
     .topRightLinks{
         font-size: 20px;
     }
@@ -69,6 +72,9 @@
         margin: 0px auto;
         float: none;
         display: table;
+    }
+    .mainBody{   
+        top: 75px;
     }
 }
 
@@ -149,6 +155,10 @@ body, html{
 }
 
 .mainBody{
+    /*
+    text-align: center;
+    vertical-align: middle;
+    */
 }
 
 .topLeftWrapper {
@@ -160,24 +170,25 @@ body, html{
     left: 40px;
 }
 
+.centerImage{
+    max-width:75vw;
+}
+
 .topLeftLogo a{ 
     text-decoration: none;
 }
 
 .centerLogo {
+    text-align:center;
     position: relative;
     margin: auto;
-    height: 50vh;
     width: auto;
-    max-width:50vh;
-    border: 5px solid black;
     margin-top: 50px;
 }
 
 .mainBody {
     position: absolute;
     width: 100%;
-    top: 150px;
     left: 0;
     padding-bottom: 50px;
     text-shadow: 3px 3px 5px #bdbdbd;
