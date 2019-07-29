@@ -16,9 +16,16 @@
     .leftContent {
         font-size: 60px;
         margin-bottom: 75px;
+        float: left;
+        width: 35vw;
+        margin-left: 5vw;
+        text-align: center;
     }
     .rightContent {
         font-size: 40px;
+        float: right;
+        width: 50vw;
+        margin-right: 5vw;
     }
     .centerContent{
         font-size: 40px;
@@ -52,10 +59,15 @@
     .leftContent {
         font-size: 30px;
         margin-bottom: 25px;
+        display:none;
     }
     .rightContent {
         font-size: 20px;
+        margin: auto;
+        text-align: center;
+        width: 75vw;
     }
+    
     .centerContent{
         font-size: 20px;
     }
@@ -191,19 +203,6 @@ body, html{
     left: 0;
     padding-bottom: 50px;
     /*text-shadow: 3px 3px 5px #bdbdbd;*/
-}
-
-.leftContent {
-    float: left;
-    width: 35vw;
-    margin-left: 5vw;
-    text-align: center;
-}
-
-.rightContent {
-    float: right;
-    width: 50vw;
-    margin-right: 5vw;
 }
 
 .centerContent {
