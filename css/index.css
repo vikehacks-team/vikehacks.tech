@@ -7,6 +7,9 @@
     .topRightLinks{
         font-size: 30px;
     }
+    .topLeftWrapper{  
+        display: table-cell;
+    }
     .topLeftLogo{
         font-size: 50px;
     }
@@ -29,6 +32,11 @@
     .textTitle {
         margin-bottom:75px;
     }
+    .topRightLinks{   
+        display: table-cell;
+        float: right;
+        right: 50px;
+    }
 }
 
 @media screen and (max-width: 800px) {
@@ -36,7 +44,7 @@
         font-size: 20px;
     }
     .topLeftWrapper{
-        visibility:hidden;
+        display:none;
     }
     .leftContent {
         font-size: 30px;
@@ -56,6 +64,11 @@
     }
     .textTitle {
         margin-bottom:25px;
+    }
+    .topRightLinks{
+        margin: 0px auto;
+        float: none;
+        display: table;
     }
 }
 
@@ -85,9 +98,6 @@ body, html{
 
 .topRightLinks {
     position: relative;
-    float: right;
-    right: 50px;
-    display: table-cell;
     vertical-align: middle;
 }
 
@@ -142,7 +152,6 @@ body, html{
 }
 
 .topLeftWrapper {
-    display: table-cell;
     vertical-align: middle;
 }
 
