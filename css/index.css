@@ -5,13 +5,13 @@
 }
 
 @media screen and (min-width: 1100px) {
-    .topRightLinks{
+    .topRightLinks {
         font-size: 30px;
     }
-    .topLeftWrapper{  
+    .topLeftWrapper {
         display: table-cell;
     }
-    .topLeftLogo{
+    .topLeftLogo {
         font-size: 50px;
     }
     .leftContent {
@@ -28,39 +28,33 @@
         width: 50vw;
         margin-right: 5vw;
     }
-    .centerContent{
+    .centerContent {
         font-size: 40px;
     }
-    .separatorLine {
-        margin-bottom:75px;
-    }
-    .textSection{
-        padding-top:75px;
-    }
     .textTitle {
-        margin-bottom:50px;
+        margin-bottom: 50px;
     }
-    .topRightLinks{   
+    .topRightLinks {
         display: table-cell;
         float: right;
         right: 50px;
     }
-    .mainBody{   
+    .mainBody {
         top: 150px;
     }
 }
 
 @media screen and (max-width: 1100px) {
-    .topRightLinks{
+    .topRightLinks {
         font-size: 20px;
     }
-    .topLeftWrapper{
-        display:none;
+    .topLeftWrapper {
+        display: none;
     }
     .leftContent {
         font-size: 30px;
         margin-bottom: 25px;
-        display:none;
+        display: none;
     }
     .rightContent {
         font-size: 20px;
@@ -68,33 +62,26 @@
         text-align: center;
         width: 75vw;
     }
-    
-    .centerContent{
+    .centerContent {
         font-size: 20px;
     }
-    .separatorLine {
-        margin-bottom:25px;
-    }
-    .textSection{
-        padding-top:50px;
-    }
     .textTitle {
-        margin-bottom:25px;
+        margin-bottom: 25px;
     }
-    .topRightLinks{
+    .topRightLinks {
         margin: 0px auto;
         float: none;
         display: table;
     }
-    .mainBody{   
+    .mainBody {
         top: 75px;
     }
 }
 
-body, html{
-    margin:0;
-    padding:0;
-    
+body,
+html {
+    margin: 0;
+    padding: 0;
 }
 
 .topBar {
@@ -125,10 +112,10 @@ body, html{
     vertical-align: middle;
     padding-right: 20px;
     padding-left: 20px;
-    cursor:default;
+    cursor: default;
 }
 
-.topLink a{
+.topLink a {
     transition: text-shadow 0.25s ease;
     text-decoration: none;
 }
@@ -166,7 +153,7 @@ body, html{
     color: rgb(137, 192, 255);
 }
 
-.mainBody{
+.mainBody {
     /*
     text-align: center;
     vertical-align: middle;
@@ -182,22 +169,22 @@ body, html{
     left: 40px;
 }
 
-.centerImage{
-    max-width:75vw;
+.centerImage {
+    max-width: 75vw;
 }
 
-.topLeftLogo a{ 
+.topLeftLogo a {
     text-decoration: none;
 }
 
 .centerLogo {
-    text-align:center;
+    text-align: center;
     position: relative;
     margin: auto;
     width: auto;
-    height:50vh;
-    max-height:75vw;
-    max-width:90vw;
+    height: 50vh;
+    max-height: 75vw;
+    max-width: 90vw;
     margin-top: 50px;
     background-color: rgb(51, 158, 255);
     -webkit-mask: url("../images/Logo-SVG.svg") no-repeat center;
@@ -226,11 +213,13 @@ body, html{
     margin-left: auto;
     margin-right: auto;
     /*margin-bottom:75px;*/
+    margin-bottom: 75px;
     box-shadow: 0px 2px 10px #888888;
 }
 
-.textSection{
+.textSection {
     clear: both;
+    padding-top: 75px;
     /*padding-top:150px;*/
 }
 
