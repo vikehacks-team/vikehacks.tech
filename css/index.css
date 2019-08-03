@@ -104,12 +104,6 @@ div.partner {
     font-weight: bold;
 }
 
-
-/* Causes links to be aquamarine (blue-green)
-article section:nth-child(odd) a {
-    color: aquamarine;
-}*/
-
 .sponsorLogo {
     width: 250px;
 }
@@ -117,3 +111,9 @@ article section:nth-child(odd) a {
 .sponsorLogos {
     text-align: center;
 }
+
+
+/* Causes links to be aquamarine (blue-green)
+article section:nth-child(odd) a {
+    color: aquamarine;
+}*/
