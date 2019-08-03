@@ -39,9 +39,6 @@
         float: right;
         right: 50px;
     }
-    .mainBody {
-        top: 150px;
-    }
 }
 
 @media screen and (max-width: 1100px) {
@@ -72,9 +69,6 @@
         margin: 0px auto;
         float: none;
         display: table;
-    }
-    .mainBody {
-        top: 75px;
     }
 }
 
@@ -154,6 +148,7 @@ html {
 }
 
 .mainBody {
+    top: 150px;
     /*
     text-align: center;
     vertical-align: middle;
@@ -228,4 +223,8 @@ html {
     text-align: center;
     font-size: 40px;
     /*margin-bottom:75px;*/
+}
+
+.Vimage {
+    height: 50px;
 }
