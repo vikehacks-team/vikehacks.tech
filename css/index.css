@@ -5,7 +5,6 @@
         max-width: 1000px;
         overflow: hidden;
     }
-
     .hero .left {
         align-items: center;
         display: flex;
@@ -13,12 +12,10 @@
         height: 500px;
         width: 50%;
     }
-
     .hero .right {
         float: right;
         width: 50%;
     }
-
     div.stat {
         font-size: 1.8em;
         padding: 20px 35px;
@@ -31,7 +28,6 @@
         text-align: center;
         font-size: 0.75em;
     }
-
     div.stat {
         padding: 10px 35px;
         width: 100%;
@@ -42,7 +38,8 @@
     margin-bottom: 40px;
 }
 
-.hero h1, h2 {
+.hero h1,
+h2 {
     color: black;
     font-family: "Open Sans", sans-serif;
 }
@@ -97,7 +94,8 @@ div.partner {
     width: 100%;
 }
 
-#schedule table td, #schedule table th {
+#schedule table td,
+#schedule table th {
     border-bottom: thin solid #DDDDDD;
     padding: 15px;
 }
@@ -106,7 +104,16 @@ div.partner {
     font-weight: bold;
 }
 
+
 /* Causes links to be aquamarine (blue-green)
 article section:nth-child(odd) a {
     color: aquamarine;
 }*/
+
+.sponsorLogo {
+    width: 250px;
+}
+
+.sponsorLogos {
+    text-align: center;
+}
