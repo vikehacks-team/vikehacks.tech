@@ -62,7 +62,12 @@ p {
 }
 
 a[href] {
-    color: var(--theme-color)
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+a[href]:hover {
+    color: white !important;
 }
 
 nav ul {
