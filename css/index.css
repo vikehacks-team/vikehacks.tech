@@ -184,7 +184,6 @@ body {
     height: 50vh;
     max-height: 75vw;
     max-width: 90vw;
-    margin-top: 50px;
     background-color: rgb(51, 158, 255);
     -webkit-mask: url("../images/Logo-SVG.svg") no-repeat center;
     -webkit-mask-size: contain;
