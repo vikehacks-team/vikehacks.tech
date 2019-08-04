@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #181a1b;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    left: 0;
+    padding: 16px 24px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header :first-child {
+    /*Push all other elements to the far right of the header*/
+    flex-grow: 1;
+}
+
+header :not(:first-child) {
+    /*Account for the logo not being vertically centered around the text*/
+    margin-top: 4px;
+}
+
+header img:first-of-type {
+    height: 40px;
+}
+
+header nav {
+    display: none;
+}
+
+#menu-activate {
+    background: transparent;
+    border: none;
+    color: gray;
+    font-size: 1.5em;
+}
