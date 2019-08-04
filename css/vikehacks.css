@@ -2,20 +2,38 @@
     box-sizing: border-box;
 }
 
-body {
+:root {
+    --dark-bg: darkgrey;
+    --theme-color: rgb(51, 158, 255)
+}
+
+html {
     margin: 0;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    margin: 74px 0 0;
     padding: 0;
     background-color: #181a1b;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7em;
+}
+
 header {
     align-items: center;
+    background-color: #FFFFFFCC;
     display: flex;
     left: 0;
-    padding: 16px 24px;
+    padding: 16px 24px 18px;
     position: fixed;
     top: 0;
+    transition: background-color 1s;
     width: 100%;
+    z-index: 2;
 }
 
 header :first-child {
@@ -41,4 +59,12 @@ header nav {
     border: none;
     color: gray;
     font-size: 1.5em;
+}
+
+p {
+    line-height: 2em;
+}
+
+a[href] {
+    color: var(--theme-color)
 }

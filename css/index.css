@@ -1,18 +1,72 @@
+:root {
+    --clip-height: 48px;
+}
+
 .hero {
     align-items: center;
     background-image: url("../images/hero-bg.png");
     background-size: cover;
     background-position: center;
+    color: white;
     display: flex;
     justify-content: center;
+    left: 0;
     min-height: 80vh;
+    width: 100%;
+}
+
+.hero div {
+    text-align: center;
+    width: 70%;
+}
+
+.hero div h2 {
+    margin-top: 0;
 }
 
 #hero-img {
-    background-color: rgb(51, 158, 255);
-    -webkit-mask: url("../images/hero.svg") no-repeat center;
-    -webkit-mask-size: contain;
-    position: relative;
-    height: 40vh;
-    width: 70%;
+    height: 27vh;
+    width: 100%;
+}
+
+#hero-img-g {
+    fill: var(--theme-color);
+}
+
+main {
+    color: white;
+    margin-top: calc(-1 * var(--clip-height));
+    z-index: 1;
+}
+
+section {
+    --upper-padding: calc(var(--clip-height) * 0.5 + 48px);
+    padding: var(--upper-padding);
+    padding-bottom: calc(var(--upper-padding) + 16px);
+    margin: auto;
+    max-width: 1000px
+}
+
+section:nth-child(odd) {
+    background-color: var(--theme-color);
+    clip-path: polygon(
+            0 0,
+            100% var(--clip-height),
+            100% 100%,
+            0 calc(100% - var(--clip-height)));
+}
+
+section:nth-child(odd) a[href] {
+    color: black;
+}
+
+section h1 {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 960px) {
+    section {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
 }
