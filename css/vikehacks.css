@@ -25,8 +25,6 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
     align-items: center;
-    /*background-color: #FFFFFFCC;*/
-    /*background-color: white;*/
     display: flex;
     left: 0;
     padding: 16px 24px 18px;
@@ -42,7 +40,7 @@ header :first-child {
     flex-grow: 1;
 }
 
-header :not(:first-child) {
+header #menu-activate {
     /*Account for the logo not being vertically centered around the text*/
     margin-top: 4px;
 }
@@ -50,10 +48,6 @@ header :not(:first-child) {
 header img:first-of-type {
     visibility: hidden;
     height: 40px;
-}
-
-header nav {
-    display: none;
 }
 
 #menu-activate {
@@ -71,14 +65,48 @@ a[href] {
     color: var(--theme-color)
 }
 
+nav ul {
+    list-style-type: none;
+    margin-left: 0;
+}
+
+@media screen and (max-width: 959px) {
+    nav {
+        background: black;
+        height: 100vh;
+        left: -100%;
+        margin-top: 0 !important;
+        top: 0;
+        position: fixed;
+        transition: left 500ms;
+        min-width: 200px;
+        width: 60vw;
+    }
+
+    nav ul li {
+        padding: 8px;
+    }
+
+    nav.open {
+        left: 0;
+        z-index: 3;
+    }
+
+    .blackout {
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #00000088;
+        z-index: 1;
+        visibility: hidden;
+    }
+}
+
 @media screen and (min-width: 960px) {
     header nav {
         display: block;
-    }
-
-    nav ul {
-        list-style-type: none;
-        margin-left: 0;
     }
 
     nav ul li {
