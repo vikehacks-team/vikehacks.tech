@@ -22,3 +22,8 @@ document.querySelector("#menu-activate").addEventListener("click", () => {
         it.addEventListener("click", listener);
     });
 });
+
+document.querySelectorAll("#hero-img path").forEach(it => {
+    it.style.strokeDasharray = it.getTotalLength();
+    it.style.strokeDashoffset = it.getTotalLength();
+});
