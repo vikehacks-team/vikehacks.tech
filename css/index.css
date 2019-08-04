@@ -1,261 +1,72 @@
-* {
-    font-family: Calibri, Candara, Segoe, Segoe UI, Optima, Arial, sans-serif;
-    line-height: 100%;
+:root {
+    --clip-height: 48px;
 }
 
-@media screen and (min-width: 1000px) {
-    .topRightLinks {
-        font-size: 30px;
-    }
-    .topLeftWrapper {
-        display: table-cell;
-    }
-    .topLeftLogo {
-        font-size: 50px;
-    }
-    .leftContent {
-        font-size: 60px;
-        /*margin-bottom: 75px;*/
-        float: left;
-        width: 35vw;
-        margin-left: 5vw;
-        text-align: center;
-    }
-    .rightContent {
-        font-size: 40px;
-        float: right;
-        width: 50vw;
-        margin-right: 5vw;
-    }
-    .centerContent {
-        font-size: 40px;
-    }
-    .textTitle {
-        margin-bottom: 50px;
-    }
-    .topRightLinks {
-        display: table-cell;
-        float: right;
-        right: 50px;
-    }
-    .mainBody{
-        top: 150px;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .topRightLinks {
-        font-size: 20px;
-    }
-    .topLeftWrapper {
-        display: none;
-    }
-    .leftContent {
-        font-size: 30px;
-        margin-bottom: 25px;
-        display: none;
-    }
-    .rightContent {
-        font-size: 20px;
-        margin: auto;
-        text-align: center;
-        width: 75vw;
-    }
-    .centerContent {
-        font-size: 20px;
-    }
-    .textTitle {
-        margin-bottom: 25px;
-    }
-    .topRightLinks {
-        margin: 0px auto;
-        float: none;
-        display: table;
-    }
-    .mainBody{
-        top: 100px;
-    }
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #181a1b;
-}
-
-.topBar {
-    background-color: #181a1b;
-    white-space: nowrap;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 75px;
-    display: table;
-    box-shadow: 0px 2px 10px #666666;
-    padding: 0;
-    z-index: 2;
-}
-
-.topRightWrapper {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.topRightLinks {
-    position: relative;
-    vertical-align: middle;
-}
-
-.topLink {
-    display: table-cell;
-    vertical-align: middle;
-    padding-right: 20px;
-    padding-left: 20px;
-    cursor: default;
-}
-
-.topLink a {
-    transition: text-shadow 0.25s ease;
-    text-decoration: none;
-}
-
-.topLink a:hover {
-    text-shadow: 5px 5px 5px #aaaaaa;
-}
-
-.breakLine {
-    position: relative;
-    height: 30px;
-    width: 2px;
-    background-color: #0044ff;
-}
-
-.breakLineWrapper {
-    display: table-cell;
-    vertical-align: middle;
-    width: 3px;
-}
-
-.lightBlueText {
-    color: rgb(137, 192, 255);
-}
-
-.darkBlueText {
-    color: rgb(51, 158, 255);
-}
-
-.whiteText {
+.hero {
+    align-items: center;
+    background-image: url("../images/hero-bg.png");
+    background-size: cover;
+    background-position: center;
     color: white;
-}
-
-.lightGrayText {
-    color: rgb(204, 201, 193);
-}
-
-.mainBody a {
-    color: #dedede;
-}
-
-.mainBody {
-    /*
-    text-align: center;
-    vertical-align: middle;
-    */
-}
-
-.topLeftWrapper {
-    vertical-align: middle;
-}
-
-.topLeftLogo {
-    position: relative;
-    left: 40px;
-}
-
-.centerImage {
-    max-width: 75vw;
-}
-
-.topLeftLogo a {
-    text-decoration: none;
-}
-
-.centerLogo {
-    text-align: center;
-    position: relative;
-    margin: auto;
-    width: auto;
-    height: 50vh;
-    max-height: 75vw;
-    max-width: 90vw;
-    background-color: rgb(51, 158, 255);
-    -webkit-mask: url("../images/Logo-SVG.svg") no-repeat center;
-    -webkit-mask-size: contain;
-}
-
-.mainBody {
-    position: absolute;
-    width: 100%;
+    display: flex;
+    justify-content: center;
     left: 0;
-    padding-bottom: 50px;
-    /*text-shadow: 3px 3px 5px #bdbdbd;*/
+    min-height: 80vh;
+    width: 100%;
 }
 
-.centerContent {
+.hero div {
+    text-align: center;
+    width: 70%;
+}
+
+.hero div h2 {
+    margin-top: 0;
+}
+
+#hero-img {
+    height: 27vh;
+    width: 100%;
+}
+
+#hero-img-g {
+    fill: var(--theme-color);
+}
+
+main {
+    color: white;
+    margin-top: calc(-0.5 * var(--clip-height));
+    z-index: 1;
+}
+
+section {
+    --upper-padding: calc(var(--clip-height) * 0.5 + 48px);
+    padding: var(--upper-padding);
+    padding-bottom: calc(var(--upper-padding) + 16px);
     margin: auto;
-    text-align: center;
-    width: 75vw;
+    max-width: 1000px
 }
 
-.separatorLine {
-    clear: both;
-    width: 90vw;
-    height: 1px;
-    background-color: #888888;
-    margin-left: auto;
-    margin-right: auto;
-    /*margin-bottom:75px;*/
-    margin-bottom: 75px;
-    box-shadow: 0px 2px 10px #888888;
+section:nth-child(odd) {
+    background-color: var(--theme-color);
+    clip-path: polygon(
+            0 0,
+            100% var(--clip-height),
+            100% 100%,
+            0 calc(100% - var(--clip-height)));
 }
 
-.textSection {
-    clear: both;
-    margin-bottom:50px;
+section:nth-child(odd) a[href] {
+    color: black;
 }
 
-.textSection:nth-child(odd){
-    background-color:transparent;
-}
-.textSection:nth-child(even){
-    background-color:rgb(51, 158, 255);
-    clip-path: polygon(0% 0%, 0 calc(100% - 50px), 100% 100%, 100% 50px);/*padding-top:150px;*/
-    padding-bottom:75px;
-    padding-top:75px;
+section h1 {
+    margin-top: 0;
 }
 
-.textSection::before { 
-    display: block; 
-    content: " "; 
-    height: 150px;      /* Give height of your fixed element */
-    margin-top: -150px; /* Give negative margin of your fixed element */   
-    visibility: hidden; 
-}
-
-.textSection::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-.textTitle {
-    position: relative;
-    text-align: center;
-    font-size: 40px;
-    /*margin-bottom:75px;*/
-}
-
-.Vimage {
-    height: 50px;
+@media screen and (min-width: 960px) {
+    section {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
 }
