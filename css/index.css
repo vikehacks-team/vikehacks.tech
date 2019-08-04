@@ -222,12 +222,17 @@ body {
 
 .textSection {
     clear: both;
+    margin-bottom:50px;
+}
+
+.textSection:nth-child(odd){
+    background-color:transparent;
+}
+.textSection:nth-child(even){
     background-color:rgb(51, 158, 255);
+    clip-path: polygon(0% 0%, 0 calc(100% - 50px), 100% 100%, 100% 50px);/*padding-top:150px;*/
     padding-bottom:75px;
     padding-top:75px;
-    margin-bottom:50px;
-    clip-path: polygon(0% 0%, 0 calc(100% - 50px), 100% 100%, 100% 50px);/*padding-top:150px;*/
-    overflow: auto;
 }
 
 .textSection::after {
