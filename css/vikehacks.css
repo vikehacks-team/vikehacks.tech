@@ -36,6 +36,7 @@ header {
     background-color:#000000AA;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+    -o-filter: blur(5px);
     height:75px;
 }
 
