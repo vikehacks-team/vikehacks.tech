@@ -33,6 +33,9 @@ header {
     transition: background-color 1s;
     width: 100%;
     z-index: 2;
+    background-color:#000000AA;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 header :first-child {

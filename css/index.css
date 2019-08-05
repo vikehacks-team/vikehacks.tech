@@ -41,11 +41,10 @@ main {
 }
 
 section {
-    --upper-padding: calc(var(--clip-height) * 0.5 + 48px);
+    --upper-padding: calc(var(--clip-height) * 0.5 + 36px);
     padding: var(--upper-padding);
     padding-bottom: calc(var(--upper-padding) + 16px);
     margin: auto;
-    max-width: 1000px
 }
 
 section:nth-child(odd) {
@@ -74,6 +73,7 @@ section h1 {
 
 @keyframes flow {
     from {
+        stroke-width: 0;
         fill: transparent;
     }
     75% {
@@ -82,11 +82,30 @@ section h1 {
     to {
         fill: var(--theme-color);
         stroke-dashoffset: 0;
+        stroke-width: 50;
     }
 }
 
 path {
     animation: flow 3s linear forwards;
     stroke: var(--theme-color);
-    stroke-width: 20;
+}
+
+#schedule table {
+    width: 100%;
+}
+
+#schedule table td,
+#schedule table th {
+    border-bottom: thin solid #DDDDDD;
+    padding:12px;
+    min-width:50px;
+}
+
+#schedule td:nth-child(odd){
+    white-space: nowrap;
+}
+
+#schedule table th {
+    font-weight: bold;
 }
