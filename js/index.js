@@ -31,9 +31,10 @@ document.querySelectorAll("#hero-img path").forEach(it => {
 Array.from(document.querySelectorAll("a")).filter(link=>{
     return link.getAttribute("href").startsWith("#");
 }).forEach(link=>{
-    console.log(link);
     link.addEventListener("click", (event) => {
-        document.querySelectorAll(link.getAttribute("href"))[0].scrollIntoView({behavior: "smooth"});
+        let item = document.querySelectorAll(link.getAttribute("href"))[0];
+        let count = item.offsetTop - item.parentElement.scrollTop - 75;
+        window.scrollTo({top: count, left: 0, behavior: 'smooth'})
         event.preventDefault();
     });
 });
