@@ -49,7 +49,6 @@ header #menu-activate {
 }
 
 header img:first-of-type {
-    visibility: hidden;
     height: 40px;
 }
 
