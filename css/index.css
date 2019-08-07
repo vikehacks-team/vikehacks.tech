@@ -1,5 +1,6 @@
 :root {
     --clip-height: 48px;
+    scroll-behavior: smooth;
 }
 
 .hero {
