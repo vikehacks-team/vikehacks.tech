@@ -2,12 +2,15 @@
     --clip-height: 48px;
 }
 
-.hero {
-    align-items: center;
-    background-attachment: fixed;
+body{
     background-image: url("../images/hero-bg.png");
+    background-attachment: fixed;
     background-size: cover;
     background-position: center;
+}
+
+.hero {
+    align-items: center;
     color: white;
     display: flex;
     justify-content: center;
@@ -45,6 +48,7 @@ section {
     padding: var(--upper-padding);
     padding-bottom: calc(var(--upper-padding) + 16px);
     margin: auto;
+    max-width:1250px;
 }
 
 section:nth-child(odd) {
@@ -108,4 +112,26 @@ path {
 
 #schedule table th {
     font-weight: bold;
+}
+
+#gmap_canvas{
+    border: none;
+    height: 500px;
+    width: 100%;
+}
+
+#sponsorLogos{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.shawee{
+    /*filter: brightness(0.75);*/
+}
+
+.sponsorLogo {
+    width: 250px;
+    margin:16px;
 }

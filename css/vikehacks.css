@@ -5,6 +5,7 @@
 :root {
     --dark-bg: darkgrey;
     --theme-color: rgb(51, 158, 255);
+    --accent-color: rgb(0, 95, 184);
 }
 
 html {
@@ -82,6 +83,31 @@ nav ul {
 #menu-activate{
     z-index:4;
 }
+
+button.cta, .button.cta {
+    background-image: linear-gradient(90deg,var(--theme-color),var(--accent-color));
+    border-radius:30px;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    padding: 15px 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: border 500ms;
+    -moz-transition: border 500ms;
+    -ms-transition: border 500ms;
+    -o-transition: border 500ms;
+    transition: border 500ms;
+}
+
+button.cta:focus, .button.cta:focus, button.cta:hover, .button.cta:hover {
+    border: 2px solid white;
+}
+
+button.cta i.fa, .button.cta i.fa {
+    margin-right: 15px;
+}
+
 
 @media screen and (max-width: 959px) {
     nav {
