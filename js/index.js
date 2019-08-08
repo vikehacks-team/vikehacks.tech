@@ -14,7 +14,7 @@ document.querySelector("#menu-activate").addEventListener("click", () => {
         blackout.style.visibility = "hidden";
     }
     document.querySelectorAll("nav a").forEach(it => {
-        const listener = e => {
+        const listener = () => {
             nav.classList.remove("open");
             blackout.style.visibility = "hidden";
             it.removeEventListener("click", listener);
@@ -26,15 +26,4 @@ document.querySelector("#menu-activate").addEventListener("click", () => {
 document.querySelectorAll("#hero-img path").forEach(it => {
     it.style.strokeDasharray = it.getTotalLength();
     it.style.strokeDashoffset = it.getTotalLength();
-});
-
-Array.from(document.querySelectorAll("a")).filter(link=>{
-    return link.getAttribute("href").startsWith("#");
-}).forEach(link=>{
-    link.addEventListener("click", (event) => {
-        let item = document.querySelectorAll(link.getAttribute("href"))[0];
-        let count = item.offsetTop - item.parentElement.scrollTop - 75;
-        window.scrollTo({top: count, left: 0, behavior: 'smooth'})
-        event.preventDefault();
-    });
 });
