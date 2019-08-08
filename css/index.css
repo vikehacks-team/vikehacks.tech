@@ -1,93 +1,99 @@
-@media screen and (min-width: 960px) {
-    .hero {
-        font-size: 1.2em;
-        margin: auto;
-        max-width: 1000px;
-        overflow: hidden;
-    }
-    .hero .left {
-        align-items: center;
-        display: flex;
-        float: left;
-        height: 500px;
-        width: 50%;
-    }
-    .hero .right {
-        float: right;
-        width: 50%;
-    }
-    div.stat {
-        font-size: 1.8em;
-        padding: 20px 35px;
-        width: 50%;
-    }
+:root {
+    --clip-height: 48px;
+    scroll-behavior: smooth;
 }
 
-@media screen and (max-width: 960px) {
-    .hero {
-        text-align: center;
-        font-size: 0.75em;
-    }
-    div.stat {
-        padding: 10px 35px;
-        width: 100%;
-    }
+body{
+    background-image: url("../images/hero-bg.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
-.hero .left h2 {
-    margin-bottom: 40px;
-}
-
-.hero h1,
-h2 {
-    color: black;
-    font-family: "Open Sans", sans-serif;
-}
-
-article {
-    padding: 24px 0;
-}
-
-article section {
-    margin: auto;
-    max-width: 1000px;
-}
-
-div.stat {
-    display: inline-block;
-    font-weight: 300;
-    text-align: left;
-}
-
-div.stat i.fa {
-    min-width: 40px;
-}
-
-div.stat:nth-child(odd) {
-    background-color: #EEE;
-}
-
-div.partners {
-    display: flex;
+.hero {
     align-items: center;
-}
-
-div.partner {
-    display: inline-block;
-    width: 49%;
-}
-
-.mapouter[] {
-    overflow: hidden;
-    background: none !important;
-    height: 500px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    min-height: 80vh;
     width: 100%;
 }
 
-#gmap_canvas {
-    border: none;
-    height: 500px;
+.hero div {
+    text-align: center;
+    width: 70%;
+}
+
+.hero div h2 {
+    margin-top: 0;
+}
+
+#hero-img {
+    height: 27vh;
     width: 100%;
+}
+
+#hero-img-g {
+    fill: var(--theme-color);
+}
+
+main {
+    color: white;
+    margin-top: calc(-1 * var(--clip-height));
+    z-index: 1;
+}
+
+section {
+    --upper-padding: calc(var(--clip-height) * 0.5 + 36px);
+    padding: var(--upper-padding);
+    padding-bottom: calc(var(--upper-padding) + 16px);
+    margin: auto;
+    max-width:1250px;
+}
+
+section:nth-child(odd) {
+    background-color: var(--theme-color);
+    clip-path: polygon(
+            0 0,
+            100% var(--clip-height),
+            100% 100%,
+            0 calc(100% - var(--clip-height)));
+}
+
+section:nth-child(odd) a[href] {
+    color: black;
+}
+
+section h1 {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 960px) {
+    section {
+        padding-left: 128px;
+        padding-right: 128px;
+    }
+}
+
+@keyframes flow {
+    from {
+        stroke-width: 0;
+        fill: transparent;
+    }
+    75% {
+        fill: transparent;
+    }
+    to {
+        fill: var(--theme-color);
+        stroke-dashoffset: 0;
+        stroke-width: 50;
+    }
+}
+
+path {
+    animation: flow 3s linear forwards;
+    stroke: var(--theme-color);
 }
 
 #schedule table {
@@ -97,23 +103,36 @@ div.partner {
 #schedule table td,
 #schedule table th {
     border-bottom: thin solid #DDDDDD;
-    padding: 15px;
+    padding:12px;
+    min-width:50px;
+}
+
+#schedule td:nth-child(odd){
+    white-space: nowrap;
 }
 
 #schedule table th {
     font-weight: bold;
 }
 
+#gmap_canvas{
+    border: none;
+    height: 500px;
+    width: 100%;
+}
+
+#sponsorLogos{
+    display:flex;
+    align-items:center;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.shawee{
+    /*filter: brightness(0.75);*/
+}
+
 .sponsorLogo {
     width: 250px;
+    margin:16px;
 }
-
-.sponsorLogos {
-    text-align: center;
-}
-
-
-/* Causes links to be aquamarine (blue-green)
-article section:nth-child(odd) a {
-    color: aquamarine;
-}*/

@@ -1,57 +1,92 @@
-*, *::after, *::before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+* {
     box-sizing: border-box;
 }
 
-article section h1 {
-    font-size: 2.3em;
-    /*text-align: center;*/
+:root {
+    --dark-bg: darkgrey;
+    --theme-color: rgb(51, 158, 255);
+    --accent-color: rgb(0, 95, 184);
+}
+
+html {
+    margin: 0;
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: "Lato", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    line-height: 1.7em;
 }
 
 header {
     align-items: center;
     display: flex;
-    margin: auto;
-    max-width: 1000px;
-    padding: 5px 0;
+    left: 0;
+    padding: 16px 24px 18px;
+    position: fixed;
+    top: 0;
+    /*transition: background-color 1s;*/
+    width: 100%;
+    z-index: 2;
+    background-color:#000000AA;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    -o-filter: blur(5px);
+    height:75px;
 }
 
-header .header-logo {
-    color: gray;
-    font-family: 'Open Sans', sans-serif;
+header :first-child {
+    /*Push all other elements to the far right of the header*/
     flex-grow: 1;
-    font-size: 2em;
-    font-weight: 700;
+}
+
+header #menu-activate {
+    /*Account for the logo not being vertically centered around the text*/
+    margin-top: 4px;
+}
+
+header img:first-of-type {
+    height: 40px;
+}
+
+#menu-activate {
+    background: transparent;
+    border: none;
+    color: gray;
+    font-size: 1.5em;
+}
+
+p {
+    line-height: 2em;
+}
+
+a[href] {
+    color: var(--theme-color);
     text-decoration: none;
 }
 
-header nav ul {
-    margin: 0;
-    padding: 0;
+a[href]:hover {
+    color: white !important;
+}
+
+nav ul {
     list-style-type: none;
+    margin-left: 0;
 }
 
-header nav ul li {
-    display: inline;
-    text-transform: uppercase;
-}
-
-header nav ul li a {
-    color: black;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 700;
-    padding: 0 10px;
-    text-decoration: none;
+#menu-activate{
+    z-index:4;
 }
 
 button.cta, .button.cta {
-    background-color: #3f90ff;
-    border: 2px solid transparent;
+    background-image: linear-gradient(90deg,var(--theme-color),var(--accent-color));
+    border-radius:30px;
     color: white;
     font-family: "Open Sans", sans-serif;
     font-weight: 700;
@@ -73,14 +108,74 @@ button.cta i.fa, .button.cta i.fa {
     margin-right: 15px;
 }
 
-img {
-    max-width: 100%;
+
+@media screen and (max-width: 959px) {
+    nav {
+        background: black;
+        height: 100vh;
+        display:none;
+        margin-top: 0 !important;
+        top: 0;
+        position: fixed;
+        transition: left 500ms;
+        min-width: 200px;
+        width: 60vw;
+    }
+
+    nav ul li {
+        padding: 8px;
+    }
+
+    nav.open {
+        display:block;
+        right: 0;
+        z-index: 3;
+    }
+
+    .blackout {
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #00000088;
+        z-index: 1;
+        visibility: hidden;
+    }
 }
 
-img.logo {
-    width: 500px;
-}
+@media screen and (min-width: 960px) {
+    header nav {
+        display: block;
+    }
 
-p {
-    line-height: 2em;
+    nav ul li {
+        display: inline-block;
+        text-transform: uppercase;
+    }
+
+    nav ul li a {
+        color: gray !important;
+        font-weight: bold;
+        padding: 0 8px;
+        text-decoration: none;
+        transition: color 500ms;
+    }
+
+    nav ul li a:hover {
+        color: white !important;
+    }
+
+    #menu-activate {
+        display: none;
+    }
+
+    header img:first-of-type {
+        visibility: visible;
+    }
+
+    header :not(:first-child) {
+        /*Account for the logo not being vertically centered around the text*/
+        margin-top: 2px;
+    }
 }
