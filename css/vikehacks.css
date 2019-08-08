@@ -113,13 +113,15 @@ button.cta i.fa, .button.cta i.fa {
     nav {
         background: black;
         height: 100vh;
-        display:none;
+        right:-60vw;
+        opacity:0;
         margin-top: 0 !important;
         top: 0;
         position: fixed;
-        transition: left 500ms;
+        transition: 500ms;
         min-width: 200px;
         width: 60vw;
+        visibility: hidden;
     }
 
     nav ul li {
@@ -127,12 +129,14 @@ button.cta i.fa, .button.cta i.fa {
     }
 
     nav.open {
-        display:block;
+        opacity:1;
+        visibility:visible;
         right: 0;
         z-index: 3;
     }
 
     .blackout {
+        transition: 500ms;
         left: 0;
         position: fixed;
         top: 0;
@@ -141,6 +145,7 @@ button.cta i.fa, .button.cta i.fa {
         background: #00000088;
         z-index: 1;
         visibility: hidden;
+        opacity:0;
     }
 }
 
