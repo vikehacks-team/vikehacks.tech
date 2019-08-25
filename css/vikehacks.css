@@ -93,15 +93,15 @@ button.cta, .button.cta {
     padding: 15px 30px;
     text-decoration: none;
     text-transform: uppercase;
-    -webkit-transition: border 500ms;
-    -moz-transition: border 500ms;
-    -ms-transition: border 500ms;
-    -o-transition: border 500ms;
-    transition: border 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+    transition: 500ms;
 }
 
 button.cta:focus, .button.cta:focus, button.cta:hover, .button.cta:hover {
-    border: 2px solid white;
+    border-radius:10px;
 }
 
 button.cta i.fa, .button.cta i.fa {

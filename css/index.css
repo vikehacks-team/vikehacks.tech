@@ -42,6 +42,7 @@ main {
     color: white;
     margin-top: calc(-1 * var(--clip-height));
     z-index: 1;
+    margin-top:auto;
 }
 
 section {
