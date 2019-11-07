@@ -136,3 +136,7 @@ path {
     width: 250px;
     margin: 16px;
 }
+
+.repl {
+    filter: invert();
+}
