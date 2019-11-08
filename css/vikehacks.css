@@ -24,6 +24,12 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1.7em;
 }
 
+@supports not (backdrop-filter:blur(5px)){
+    header{
+        background-color:"#000000";
+    }
+}
+
 header {
     align-items: center;
     display: flex;
