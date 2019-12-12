@@ -60,6 +60,10 @@ main {
     margin-top: auto;
 }
 
+*{
+    scroll-padding-top: 75px;
+}
+
 section {
     --upper-padding: calc(var(--clip-height) * 0.5 + 36px);
     padding: var(--upper-padding);
