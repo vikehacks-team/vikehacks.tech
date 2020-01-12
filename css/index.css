@@ -9,21 +9,20 @@ body {
     */
 }
 
-.backdrop{
-    width:100%;
-    height:auto;
-    min-height:100vh;
+.backdrop {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
     left: 50%;
     transform: translateX(-50%);
-    top:0;
-    margin:0 auto;
-    position:fixed;
-    z-index:-1;
-    filter: blur(50px);
-    -moz-filter: blur(50px);
-    -webkit-filter: blur(50px);
-    -o-filter: blur(50px);
-
+    top: 0;
+    margin: 0 auto;
+    position: fixed;
+    z-index: -1;
+    filter: blur(50px) brightness(0.75);
+    -moz-filter: blur(50px) brightness(0.75);
+    -webkit-filter: blur(50px) brightness(0.75);
+    -o-filter: blur(50px) brightness(0.75);
 }
 
 .hero {
@@ -60,7 +59,7 @@ main {
     margin-top: auto;
 }
 
-*{
+* {
     scroll-padding-top: 75px;
 }
 
@@ -74,11 +73,7 @@ section {
 
 section:nth-child(odd) {
     background-color: var(--theme-color);
-    clip-path: polygon(
-            0 0,
-            100% var(--clip-height),
-            100% 100%,
-            0 calc(100% - var(--clip-height)));
+    clip-path: polygon( 0 0, 100% var(--clip-height), 100% 100%, 0 calc(100% - var(--clip-height)));
 }
 
 section:nth-child(odd) a[href] {
@@ -120,8 +115,7 @@ path {
     width: 100%;
 }
 
-#schedule table td,
-#schedule table th {
+#schedule table td, #schedule table th {
     border-bottom: thin solid #DDDDDD;
     padding: 12px;
     min-width: 50px;
@@ -148,13 +142,51 @@ path {
     justify-content: center;
 }
 
-.shawee {
-    /*filter: brightness(0.75);*/
+#people {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.person {
+    border: 10px solid white;
+    border-radius: 10px;
+    background-color: black;
+    margin: 10px;
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    font-size: 1em;
+}
+
+.person p {
+    line-height: 1em;
+}
+
+.name {
+    font-size: 1.5em;
+}
+
+.role {
+    font-size: 1em;
+}
+
+.break {
+    flex-basis: 100%;
+    width: 0;
 }
 
 .sponsor-logo {
     width: 250px;
     margin: 16px;
+}
+
+.profilePic {
+    width: 250px;
 }
 
 .repl {
