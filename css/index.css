@@ -163,6 +163,26 @@ path {
     font-size: 1em;
 }
 
+.mention {
+    padding: 15px;
+}
+
+.mention p {
+    margin-block-end: 0 !important;
+}
+
+.mention img {
+    width: 100px !important;
+}
+
+.mention .name {
+    font-size: 1em !important;
+}
+
+.mention .role {
+    font-size: 0.85em !important;
+}
+
 .person p {
     line-height: 1em;
 }
